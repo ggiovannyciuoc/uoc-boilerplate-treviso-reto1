@@ -26,7 +26,7 @@ body {
   flex-direction: column;
 }
 .header .header__navbar {
-  background-color: $primary-green;
+  background-color: $primary-blue;
   padding: 15px;
 }
 .header .header__image {
@@ -38,7 +38,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 64px;
-  font-family: 'Ropa Sans', sans-serif;
+  font-family: $font-family-sans-serif;
 }
 
 /*Nav bar*/
@@ -52,7 +52,7 @@ body {
 }
 .navbar .navbar__brand {
   font-size: 48px;
-  font-family: 'Ropa Sans', sans-serif;
+  font-family: $font-family-sans-serif;
   color: $navbar-brand-text;
 }
 .navbar .navbar__list ul {
@@ -70,7 +70,7 @@ body {
 }
 .navbar .navbar__list a {
   font-size: 24px;
-  color: #B6DAFF;
+  color: $background-light;
   text-decoration: none;
 }
 
@@ -98,7 +98,7 @@ main{
 
 .newsletter {
   text-align: center;
-  background-color: #021f44;
+  background-color: $background-dark;
   padding: 10px;
   color: $navbar-brand-text;
 }
@@ -150,8 +150,6 @@ main{
 
     grid-template-columns: auto;
   }
-
-
 }
 @media (max-width: 900px) {
   .header .header__image {
@@ -160,7 +158,6 @@ main{
   }
 
   main{
-
   grid-template-columns: auto;
   }
 }
@@ -169,4 +166,7 @@ main{
 
 footer{
   text-align: center;
+  background-color: $footer-background;
+  padding: 10px;
+  color: $background-light;
 }
