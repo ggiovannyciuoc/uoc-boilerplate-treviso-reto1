@@ -1,57 +1,169 @@
-* {
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+
+html {
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+}
+
+/*Header*/
+
+.header {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+}
+.header .header__navbar {
+  background-color: $primary-green;
+  padding: 15px;
+}
+.header .header__image {
+  flex: 1;
+  background-size: cover;
+  background-image: url(../images/treviso1.jpg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  font-family: 'Ropa Sans', sans-serif;
 }
 
-.uoc-container {
-  max-width: 800px;
+/*Nav bar*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
   margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
-  }
+.navbar .navbar__brand {
+  font-size: 48px;
+  font-family: 'Ropa Sans', sans-serif;
+  color: $navbar-brand-text;
 }
-
-.uoc-title {
-  font-family: $font-family-serif;
+.navbar .navbar__list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.navbar .navbar__list li {
+  margin: 0;
+  padding: 0;
+}
+.navbar .navbar__list li+li {
+  margin-left: 2rem;
+}
+.navbar .navbar__list a {
   font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
+  color: #B6DAFF;
+  text-decoration: none;
+}
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+main{ 
+  display: grid;
+  grid-template-columns: 60% auto;
+}
+
+.main_picture{
+
+  width:60%;
+}
+
+.main_picture--responsive {
+  width: 100%; /* Makes the image fit the container width */
+  height: 100%;  /* Maintains image aspect ratio */
+}
+.main__text{ padding: 20px;}
+
+.main__text .stemma{ text-align: center;}
+
+.main__text .stemma img{ width: 200px;}
+
+/*Newsletter*/
+
+.newsletter {
+  text-align: center;
+  background-color: #021f44;
+  padding: 10px;
+  color: $navbar-brand-text;
+}
+
+.newsletter .newsletter__heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter .newsletter__input {
+  display: block;
+  width: 350px;
+  padding: 10px;
+  margin: auto;
+
+}
+
+.newsletter .newsletter__button {
+  padding: 0.5rem;
+  color: #c0c0c0;
+  background: #fafafa;
+  font-size: 16px;
+}
+
+.newsletter .newsletter__button.newsletter__button--call-to-action {
+  background: #74B9FF ;
+  border-color: #74B9FF;
+  color: white;
+}
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navbar .navbar__brand {
+    text-align: center;
+    width: 100%;
+    font-size: 34px;
+  }
+  .navbar .navbar__list a{
+    font-size: 18px;
+  }
+
+  main{
+
+    grid-template-columns: auto;
+  }
+
+
+}
+@media (max-width: 900px) {
+  .header .header__image {
+    font-size: 44px;
+    text-align: center;
+  }
+
+  main{
+
+  grid-template-columns: auto;
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
+/*Footer*/
+
+footer{
   text-align: center;
 }

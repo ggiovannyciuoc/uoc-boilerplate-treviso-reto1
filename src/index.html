@@ -5,23 +5,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>Treviso RETO 1</title>
+    <title>Treviso, Italy</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">TREVISO!<i class="fas fa-university"></i></h1>
-      <p>
-        Treviso has much to offer to the traveller seeking a crowd-free destination with authentic character, 
-        beautiful corners, excellent art, and must-see historic sights. As the birthplace of the famous 
-        dessert tiramisu and standing adjacent to Italy’s prosecco-producing area, 
-        this small city also has delicious local cuisine. 
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <header class="header">
+ 
+      <include src="./views/nav.html"></include>
+      <div class="header__image">
+            
+      </div>
+    </header>
+
+    <main>
+      <section class="main__picture">
+        <img class ="main_picture--responsive" 
+             src="./assets/images/treviso2.jpg" 
+             alt="Image of treviso"
+             >   
+      </section>
+
+      <section class="main__text">
+        <p>
+          Relatively untouched by the throngs of tourists from nearby Venice, 
+          Treviso is an unspoiled, traditional Italian city. With fresco-painted 
+          medieval buildings, deep blue waterways, and countless local artisans, 
+          Treviso is a place to slow down and really absorb the culture. 
+          And with Venice and the incredible Dolomites both within striking distance, 
+          this could be the perfect home base for exploring Northern Italy. 
+          Did we mention that Treviso is also the home of prosecco, tiramisu, and Benetton? 
+          Let’s visit Treviso!
+        </p>
+        <div class="stemma">
+          <img src="./assets/images/stemmaT.png" alt="Coat of arms of Treviso">
+        </div>
+      </section>
+    </main>
+      <div class="newsletter">
+        <div class="newsletter__heading">
+            Newsletter
+        </div>
+        
+        <input type="email" class="newsletter__input">
+        <button class="newsletter__button">Unsubscribe</button>
+        <button class="newsletter__button newsletter__button--call-to-action">Subscribe</button>
+      </div>
+
+      <include src="./views/footer.html"></include>
+    
+      <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  
   </body>
+
 </html>
