@@ -1,27 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
-
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-html {
+*{
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: $font-family-serif;
   font-size: 16px;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
   margin: 0;
   padding: 0;
 }
 
+
 /*Header*/
 
 .header {
-  height: 100vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
 }
@@ -33,7 +25,6 @@ body {
   flex: 1;
   background-size: cover;
   background-image: url(../images/treviso1.jpg);
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +42,7 @@ body {
   margin: auto;
 }
 .navbar .navbar__brand {
-  font-size: 48px;
+  font-size: 28px;
   font-family: $font-family-sans-serif;
   color: $navbar-brand-text;
 }
@@ -69,19 +60,19 @@ body {
   margin-left: 2rem;
 }
 .navbar .navbar__list a {
-  font-size: 24px;
+  font-size: 20px;
   color: $background-light;
   text-decoration: none;
 }
 
 main{ 
   display: grid;
-  grid-template-columns: 60% auto;
+  grid-template-columns: 70% 30%;
 }
 
 .main__picture{
 
-  width:60%;
+  width:100%;
 }
 
 .main__picture--responsive {
@@ -130,6 +121,15 @@ main{
   color: white;
 }
 
+/*Footer*/
+
+footer{
+  text-align: center;
+  background-color: $footer-background;
+  padding: 20px;
+  color: $background-light;
+}
+
 /* Media Queries */
 
 @media (max-width: 900px) {
@@ -162,11 +162,3 @@ main{
   }
 }
 
-/*Footer*/
-
-footer{
-  text-align: center;
-  background-color: $footer-background;
-  padding: 10px;
-  color: $background-light;
-}
