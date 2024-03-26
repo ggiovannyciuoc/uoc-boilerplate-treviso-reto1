@@ -1,0 +1,4 @@
+@mixin bordered-padding($padding: 10px, $border-color: #ddd) {
+    padding: $padding;
+    border: 2px solid $border-color;
+  }

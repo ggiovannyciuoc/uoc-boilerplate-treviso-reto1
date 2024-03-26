@@ -1,0 +1,8 @@
+
+@function gradient-background($color1, $color2) {
+    @return linear-gradient(to bottom, $color1, $color2);
+  }
+  
+$gradient: gradient-background($background-color1, $background-color2);
+  
+  

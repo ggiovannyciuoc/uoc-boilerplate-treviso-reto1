@@ -3,7 +3,7 @@
 
 *{
   box-sizing: border-box;
-  font-family: $font-family-serif;
+  font-family:$font-family-sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -79,7 +79,10 @@ main{
   width: 100%; /* Makes the image fit the container width */
   height: 100%;  /* Maintains image aspect ratio */
 }
-.main__text{ padding: 20px;}
+.main__text{ 
+  @include bordered-padding(30px, #00f);
+  background: $gradient;
+}
 
 .main__text .stemma{ text-align: center;}
 
@@ -121,6 +124,8 @@ main{
   color: white;
 }
 
+
+
 /*Footer*/
 
 footer{
@@ -161,4 +166,5 @@ footer{
   grid-template-columns: auto;
   }
 }
+
 
