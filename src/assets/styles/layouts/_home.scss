@@ -19,8 +19,11 @@
 }
 .header .header__navbar {
   background-color: $primary-blue;
-  padding: 15px;
+ 
+  @include bordered-padding(10px, rgb(255, 255, 255));
 }
+
+
 .header .header__image {
   flex: 1;
   background-size: cover;
@@ -31,6 +34,7 @@
   font-size: 64px;
   font-family: $font-family-sans-serif;
 }
+
 
 /*Nav bar*/
 
@@ -65,6 +69,7 @@
   text-decoration: none;
 }
 
+
 main{ 
   display: grid;
   grid-template-columns: 70% 30%;
@@ -73,6 +78,8 @@ main{
 .main__picture{
 
   width:100%;
+  
+  @include bordered-padding(10px, rgb(255, 119, 0));
 }
 
 .main__picture--responsive {
@@ -80,7 +87,7 @@ main{
   height: 100%;  /* Maintains image aspect ratio */
 }
 .main__text{ 
-  @include bordered-padding(30px, #00f);
+  @include bordered-padding(30px, rgb(255, 119, 0));
   background: $gradient;
 }
 
